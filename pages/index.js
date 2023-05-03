@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData, getFox } from '../lib/posts'
 import useSWR from 'swr'
 import Link from 'next/link'
-import Date from '../components/date'
+import Date from '../components/Date'
 
 // gets fox from exernal api
 const fetcher = (url) => fetch(url).then((res) => res.json())
