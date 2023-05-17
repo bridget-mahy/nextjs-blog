@@ -59,7 +59,8 @@ export default function Home({ allPostsData, fox }) {
                 fox
               </a>{' '}
               retrieved from server lib using static props - fetching requires a
-              new HTTP request (page reload)
+              new HTTP request (page reload). I'm aware that using static/server
+              rendering for front-end data is not the best practice.
             </p>
           </div>
           {error && <p>failed to load fox</p>}
@@ -77,7 +78,9 @@ export default function Home({ allPostsData, fox }) {
                     fox
                   </a>{' '}
                   retrieved on client side using the swr hook which includes
-                  error/load handling - fetches a new fox onclick.
+                  error/load handling - it can fetch a new fox onclick. It also
+                  'updates' the fox (I'll need to look more into the swr hook
+                  and its parameters).
                 </p>
               </>
             )}
